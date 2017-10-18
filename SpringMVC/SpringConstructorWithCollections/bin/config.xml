@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 
+ <bean id="answerone" class="AnswersList">
+ <constructor-arg value="100" type="int"/>
+ <constructor-arg value="5"/>
+ <constructor-arg value="The answer is A"/>
+ <constructor-arg value="Aniketh"/>
+ </bean>
+ 
+ <bean id="answertwo" class="AnswersList">
+ <constructor-arg value="101" type="int"/>
+ <constructor-arg value="4"/>
+ <constructor-arg value="The answer is A"/>
+ <constructor-arg value="Superman"/>
+ </bean>
+ 
+ 
+ <bean id="quelist" class="QuestionList">
+ <constructor-arg value="5555"/>
+ <constructor-arg value="Aniketh"/>
+ <constructor-arg>
+ <list>
+ <ref bean="answerone"/>
+ <ref bean="answertwo"/>
+ </list>
+ </constructor-arg>
+ </bean>
+
+ 
+ <bean id="answermap" class="AnswersMap">
+ <constructor-arg value="1" type="int"/>
+ <constructor-arg value="88" type="int"/>
+ <constructor-arg value="The answer for the Set is Vijay"/>
+ </bean>
+ 
+ <bean id="usermap" class="UserMap">
+ <constructor-arg value="Aniketh12345"/>
+ <constructor-arg value="5" type="int"/>
+ </bean>
+ 
+ <bean id="quemapdepend" class="QuestionMap">
+ <constructor-arg value="105"/>
+ <constructor-arg value="Question and Answer is"/>
+ <constructor-arg>
+ <map>
+ <entry key-ref="answermap" value-ref="usermap"/>
+
+ </map>
+ </constructor-arg>
+ </bean>
+ 
+ <bean id="add" class="Address">
+ <constructor-arg value="245" type="int"/>
+ <constructor-arg value="GachiBowli"/>
+ <constructor-arg value="Hyderabad"/>
+ </bean>
+ <bean id="emp" class="Employee">
+ <constructor-arg value="25" type="int"/>
+ <constructor-arg value="Aniketh"/>
+ </bean>
+ 
+ <bean id="emptwo" class="Employee" parent="emp">
+ <constructor-arg ref="add"></constructor-arg>
+ </bean>
+ </beans>

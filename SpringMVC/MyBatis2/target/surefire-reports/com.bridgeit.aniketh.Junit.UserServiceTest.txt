@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.bridgeit.aniketh.Junit.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec <<< FAILURE!
+com.bridgeit.aniketh.Junit.UserServiceTest.testinsertUser()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bridgeit.aniketh.Junit.UserServiceTest.testinsertUser(UserServiceTest.java:42)
+
+com.bridgeit.aniketh.Junit.UserServiceTest.testgetAllUser()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bridgeit.aniketh.Junit.UserServiceTest.testgetAllUser(UserServiceTest.java:64)
+
+com.bridgeit.aniketh.Junit.UserServiceTest.testUpdateUser()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bridgeit.aniketh.Junit.UserServiceTest.testUpdateUser(UserServiceTest.java:75)
+
+com.bridgeit.aniketh.Junit.UserServiceTest.testDeleteUser()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bridgeit.aniketh.Junit.UserServiceTest.testDeleteUser(UserServiceTest.java:87)
+
+com.bridgeit.aniketh.Junit.UserServiceTest.testgetUserbyId()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.bridgeit.aniketh.Junit.UserServiceTest.testgetUserbyId(UserServiceTest.java:55)
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='com.bridgeit.aniketh.mybetisdemo.UserMapper'>
+<resultMap type='User' id='UserResult'>
+<result property='userid' column='userid'/>
+<result property='emailid' column='emailid'/>
+<result property='password' column='password'/>
+<result property='firstname' column='firstname'/>
+<result property='lastname' column='lastname'/>
+</resultMap>
+
+<select id='getUserById' parameterType='int' resultType='com.bridgeit.aniketh.mybetisdemo.User'>
+select * from user where userid=#{userid}
+</select>
+
+<select id='getAllUsers' resultMap='UserResult'>
+select * from user
+</select>
+
+<insert id='insertUser' parameterType='User' useGeneratedKeys="true" keyProperty="userid">
+insert into user(emailid,password,firstname,lastname) values(#{emailid},#{password},#{firstname},#{lastname})
+</insert>
+
+<update id='updateUser' parameterType='User'>
+update user set firstname=#{firstname},lastname=#{lastname} where userid=#{userid}
+</update>
+<delete id='deleteUser' parameterType='int'>
+delete from user where userid=#{userid}
+</delete>
+</mapper>
